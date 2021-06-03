@@ -14,19 +14,21 @@ This is a demo project to elaborate how Machine Learn Models are deployed on pro
 
 ### Project Structure
 This project has four major parts :
-1. model.py - This contains code fot our Machine Learning model to predict employee salaries absed on trainign data in '50_Startup.csv' file.
+1. model.py - This contains code for our Machine Learning model to predict employee salaries based on training data in '50_Startup.csv' file.
 2. app.py - This contains Flask APIs that receives employee details through GUI or API calls, computes the precited value based on our model and returns it.
 3. request.py - This uses requests module to call APIs already defined in app.py and dispalys the returned value.
 4. templates - This folder contains the HTML template to allow user to enter employee detail and displays the predicted employee salary.
+5. Model_checking.ipynb is a Jupyter notebook that can be use to create the model pickle file called by the app
+6. .flaskenv: If you do flask run in you terminal, you can launch the app
 
 ### Running the project
 1. Ensure that you are in the project home directory. Create the machine learning model by running below command -
 ```
 python model.py
 ```
-This would create a serialized version of our model into a file model.pkl
+This would create a serialized version of our model into a file model.pkl (you can also use the notebook)
 
-2. Run app.py using below command to start Flask API
+2. Run app.py using below command to start Flask API (you can also do flask run if .flaskenv in in the directory)
 ```
 python app.py
 ```
